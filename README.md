@@ -14,12 +14,16 @@ create workflows .yaml file for automate testing with github action with the pat
 
 # Theory Question
 - Which of the following is not a component of the Kubernetes control plane? 
-
 => kubelet
 
 - What is the purpose of a containerization platform like Docker?
-
 => package and run applications
 
 - Which of the following is a cloud-based repository for finding and sharing container images?
+=> Docker Hub
 
+- What is the purpose of continuous integration (CI) in DevOps?
+=> To build, test, and integrate code changes frequently
+
+- Which of the following is a Python web framework?
+=> Flask

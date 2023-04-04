@@ -17,6 +17,7 @@ def test3():
 def test4():
     response = app.test_client().get("/search?person=Ducanh")
     # assert b'{"error":"No matching data found."}\n' in response.data
+    assert response.status_code == 404 
 
 
 response = app.test_client().get('/search?person=ducanh')

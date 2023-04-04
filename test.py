@@ -8,6 +8,7 @@ def test2():
     response = app.test_client().get("/search")
     assert response.status_code == 200 
 def test_db():
+    response = app.test_client().get("/search")
 
 def test3():
     response = app.test_client().get("/search?person=John")

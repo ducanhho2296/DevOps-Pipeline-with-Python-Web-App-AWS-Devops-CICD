@@ -22,7 +22,6 @@ def search():
         if data["name"] == query:
             return jsonify(data)
 # Return an error message if no matching element is found
-    return jsonify({"error": "No matching data found."})
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

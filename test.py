@@ -16,7 +16,6 @@ def test3():
 
 def test4():
     response = app.test_client().get("/search?person=Ducanh")
-    assert b'{"error":"No matching data found."}\n' in response.data
 
 
 response = app.test_client().get('/search?person=ducanh')

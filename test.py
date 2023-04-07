@@ -9,6 +9,7 @@ def client():
 def test_index(client):
     response = client.get('/')
     assert response.status_code == 200
+    assert b"Welcome to the API!" in response.data
 
 def test2():
     response = app.test_client().get("/search")

@@ -6,6 +6,7 @@ def client():
     with app.test_client() as client:
         yield client
 
+def test_index(client):
     assert response.status_code == 200
 
 def test2():

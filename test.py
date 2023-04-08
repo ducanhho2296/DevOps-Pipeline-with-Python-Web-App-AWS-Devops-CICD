@@ -17,14 +17,16 @@ def test_search_success(client):
     assert response.is_json
     assert response.json == {"id": 1, "name": "John", "age": 25}
 
-def test3():
-    response = app.test_client().get("/search?person=John")
-    assert b'{"age":25,"id":1,"name":"John"}\n' in response.data
+def test_search_failure(client):
+    response = client.get('/search?person=Mary')
+    assert response.status_code == 400
+    assert response.is_json
+    assert response.json == {"error": "No matching data found."}
 
 def test4():
     response = app.test_client().get("/search?person=Ducanh")
     # assert b'{"error":"No matching data found."}\n' in response.data
-    assert response.status_code == 404 
+    assert response.status_code == 400 
 
 
 response = app.test_client().get('/search?person=ducanh')

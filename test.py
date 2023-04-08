@@ -12,6 +12,7 @@ def test_index(client):
     assert b"Welcome to the API!" in response.data
 
 def test_search_success(client):
+    response = client.get('/search?person=John')
 
 def test3():
     response = app.test_client().get("/search?person=John")

@@ -15,6 +15,7 @@ def test_search_success(client):
     response = client.get('/search?person=John')
     assert response.status_code == 200
     assert response.is_json
+    assert response.json == {"id": 1, "name": "John", "age": 25}
 
 def test3():
     response = app.test_client().get("/search?person=John")

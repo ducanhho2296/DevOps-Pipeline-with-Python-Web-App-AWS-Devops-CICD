@@ -11,6 +11,7 @@ def test_index(client):
     assert response.status_code == 200
     assert b"Welcome to the API!" in response.data
 
+def test_search_success(client):
 
 def test3():
     response = app.test_client().get("/search?person=John")
